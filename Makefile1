@@ -1,0 +1,10 @@
+OBJ = singlePrime.o
+
+singlePrime: $(OBJ)
+	gcc -o singlePrime $(OBJ)
+
+singlePrime.o: singlePrime.c singlePrime.h
+	gcc -c singlePrime.c
+
+clean: 
+	rm -f $(OBJ) singlePrime

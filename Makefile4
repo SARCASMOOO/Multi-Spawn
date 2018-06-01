@@ -1,0 +1,10 @@
+OBJ = multiSpawnSignal.o
+
+multiSpawn: $(OBJ)
+	gcc -o multiSpawnSignal $(OBJ)
+
+multiSpawn.o: multiSpawn.c multiSpawn.h
+	gcc -c multiSpawnSignal.c -g
+
+clean: 
+	rm -f $(OBJ) multiSpawnSignal

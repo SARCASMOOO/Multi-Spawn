@@ -1,0 +1,10 @@
+OBJ = multiSpawn.o
+
+multiSpawn: $(OBJ)
+	gcc -o multiSpawn $(OBJ)
+
+multiSpawn.o: multiSpawn.c multiSpawn.h
+	gcc -c multiSpawn.c -g
+
+clean: 
+	rm -f $(OBJ) multiSpawn

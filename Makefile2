@@ -1,0 +1,10 @@
+OBJ = singleSpawn.o
+
+singleSpawn: $(OBJ)
+	gcc -o singleSpawn $(OBJ)
+
+singleSpawn.o: singleSpawn.c singlePrime.h
+	gcc -c singleSpawn.c
+
+clean: 
+	rm -f $(OBJ) singleSpawn
